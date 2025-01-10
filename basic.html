@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch-like UI</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Scratch-Like</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section id="main-content">
+        <!-- Left Panel for Code Blocks -->
+        <div class="left-panel">
+            <h2>Code Blocks</h2>
+            <div class="scrollable-blocks">
+                <div class="block">Move 10 steps</div>
+                <div class="block">Turn 15 degrees</div>
+                <div class="block">Say "Hello!"</div>
+                <div class="block">Change color</div>
+                <div class="block">Repeat 10 times</div>
+                <div class="block">If clicked</div>
+                <div class="block">When green flag clicked</div>
+                <div class="block">Broadcast message</div>
+                <!-- More blocks can be added here -->
+            </div>
+        </div>
+
+        <!-- Center Panel for Placing Blocks -->
+        <div class="center-panel">
+            <div class="clear-all-container">
+                <button id="clear-all-btn">Clear All</button>
+            </div>
+            
+            <div class="canvas">
+                <!-- Additional blocks will be placed here -->
+            </div>
+        </div>
+
+        <!-- Right Panel Split into Visual Space and Sprite Selection -->
+        <div class="right-panel">
+            <div class="visual-space">
+                <h2>Sprite Visual Space</h2>
+                <div class="canvas">
+                    <div class="sprite">Sprite 1</div>
+                </div>
+            </div>
+
+            <div class="sprite-selection">
+                <h3>Select Sprite</h3>
+                <div class="sprite-option">Sprite 1</div>
+                <div class="sprite-option">Sprite 2</div>
+                <div class="sprite-option">Sprite 3</div>
+                <div class="sprite-option">Sprite 4</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Scratch-Like Platform</p>
+    </footer>
+<script src="basic.js"></script>
+</body>
+</html>

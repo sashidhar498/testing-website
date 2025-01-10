@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    min-height: 100vh; /* Ensures body takes full height */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff9a00;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+.navbar nav ul li {
+    display: inline;
+}
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+    color: #f1c40f;
+}
+
+/* Main Content Section */
+#main-content {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1; /* Ensures this section grows to fill remaining space */
+}
+
+/* Left Panel (Code Blocks) */
+.left-panel {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.left-panel h2 {
+    font-size: 1.5em;
+    color: #ff9a00;
+    margin-bottom: 10px;
+}
+
+.scrollable-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.block {
+    background-color: #ffeb3b;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.block:hover {
+    background-color: #ffd54f;
+}
+.clear-all-container {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+#clear-all-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#clear-all-btn:hover {
+    background-color: #e64a19;
+}
+
+
+/* Center Panel (Place Blocks Area) */
+.center-panel {
+    flex: 2;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-panel h2 {
+    font-size: 1.5em;
+    color: #ff9a00;
+    margin-bottom: 10px;
+}
+
+.canvas {
+    background-color: #ececec;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.placed-block {
+    background-color: #ffd54f;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Right Panel (Visual Space and Sprite Selection) */
+.right-panel {
+    padding: 15px;
+    height: 80vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.visual-space {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 40vh;
+}
+
+.visual-space h2 {
+    font-size: 1.5em;
+    color: #ff9a00;
+}
+
+.sprite-selection {
+    height: 40vh;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sprite-selection h3 {
+    font-size: 1.2em;
+    color: #ff9a00;
+    margin-bottom: 10px;
+}
+
+.sprite-option {
+    background-color: #ff9a00;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sprite-option:hover {
+    background-color: #ff5722;
+}
+
+/* Footer */
+footer {
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+    text-align: center;
+    padding: 20px;
+    background-color: #ff9a00;
+    color: white;
+    font-size: 1.2em;
+}
+footer p {
+    margin: 0;
+}
+/* Responsive Layout */
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-panel, .center-panel, .right-panel {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar nav ul li {
+        display: block;
+    }
+
+    .scrollable-blocks {
+        gap: 10px;
+    }
+
+    .block {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .canvas {
+        width: 100%;
+        height: 60%;
+    }
+
+    .sprite-selection {
+        height: 30vh;
+    }
+
+    .footer {
+        font-size: 1em;
+    }
+}
+
+/* Custom Scrollbars */
+.left-panel::-webkit-scrollbar, .right-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-panel::-webkit-scrollbar-thumb, .right-panel::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.left-panel::-webkit-scrollbar-track, .right-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.context-menu {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    z-index: 1001;  /* Ensure it appears above other content */
+    font-size: 14px;
+}
+
+.context-menu div {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.context-menu div:hover {
+    background-color: #f0f0f0;
+}
+

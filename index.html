@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Scratch-Like Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .welcome-text {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .start-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .start-btn:hover {
+            background-color: #005fa3;
+        }
+        #home {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 20px;
+            height: 90vh;
+            width: 97vw;
+            background: #fffbf0;
+            box-shadow: inset 0px 20px 30px rgba(0, 0, 0, 0.7);
+        }
+        #home h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ff9a00;
+        }
+        #home p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <section id="home">
+        <h1>Welcome to the Scratch-like Platform</h1>
+        <p>Create, Share, and Explore Amazing Projects!</p>
+        <button class="start-btn" onclick="window.location.href='home.html';">Start the Project</button>
+    </section>
+</body>
+</html>
